@@ -1,6 +1,6 @@
 package br.com.klein.backoffice.tables.models;
 
-import br.com.klein.backoffice.baseEntity.BaseEntity;
+import br.com.klein.backoffice.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.NotNull;
@@ -12,12 +12,35 @@ import jakarta.validation.constraints.NotNull;
 public class Table extends BaseEntity {
 
     @NotNull
-    public String name;
+    private String name;
 
     @NotNull
-    public Integer seatCount;
+    private Integer seatCount;
 
     @NotNull
-    public Boolean active;
+    private Boolean active;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getSeatCount() {
+        return seatCount;
+    }
+
+    public void setSeatCount(Integer seatCount) {
+        this.seatCount = seatCount;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
 }

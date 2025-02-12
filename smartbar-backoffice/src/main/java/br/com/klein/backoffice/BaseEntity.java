@@ -1,4 +1,4 @@
-package br.com.klein.backoffice.baseEntity;
+package br.com.klein.backoffice;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.GeneratedValue;

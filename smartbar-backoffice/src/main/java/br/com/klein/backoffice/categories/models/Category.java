@@ -1,6 +1,6 @@
 package br.com.klein.backoffice.categories.models;
 
-import br.com.klein.backoffice.baseEntity.BaseEntity;
+import br.com.klein.backoffice.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
@@ -12,8 +12,24 @@ import jakarta.validation.constraints.NotNull;
 })
 public class Category extends BaseEntity {
     @NotNull
-    public String name;
+    private String name;
 
     @NotNull
-    public String description;
+    private String description;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
